@@ -1,0 +1,21 @@
+{{ user.first_name }} {{ user.last_name }}
+<fieldset>
+  <div class="col-md-4">
+    <div class="form-group" show-errors>
+      <label class="control-label" for="firstName">First Name</label>
+      <input name="name" type="text" ng-model="user.first_name" id="firstName" class="form-control" placeholder="First Name" required>
+    </div>
+    <div class="form-group" show-errors>
+      <label class="control-label" for="lastName">Last Name</label>
+      <input name="name" type="text" ng-model="user.last_name" id="lastName" class="form-control" placeholder="Last Name" required>
+    </div>
+    <div class="form-group" show-errors>
+      <label class="control-label" for="Account Type">Account Type</label>
+      <input name="name" type="text" ng-model="user.account_type" id="lastName" class="form-control" placeholder="Account Type" required>
+    </div>
+  </div>
+
+  <div ng-show="error" class="text-danger">
+    <strong ng-bind="error"></strong>
+  </div>
+</fieldset>

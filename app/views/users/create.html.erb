@@ -1,0 +1,22 @@
+<form ng-submit="addUser()">
+    <div class="row">
+        <div class="col-xs-6">
+            <input type="text" ng-model="newUser.first_name" class="form-control" placeholder="First Name" />
+        </div>
+        <div class="col-xs-6">
+            <input type="text" ng-model="newUser.last_name" class="form-control" placeholder="Last Name" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <br />
+            <input type="text" ng-model="newUser.account_type" class="form-control" placeholder="Reason for Visit" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 text-center">
+            <br />
+            <input type="Submit" value="Add User" class="btn btn-primary" />
+        </div>
+    </div>
+</form>

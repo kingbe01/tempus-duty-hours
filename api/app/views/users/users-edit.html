@@ -1,0 +1,13 @@
+<div class="page-header">
+  <h1>{{user.first_name}} {{user.last_name}}</h1>
+</div>
+
+<form class="form-horizontal" role="form" >
+  <div ng-include="'views/users/_form.html'"></div>
+  <div class="col-md-12">
+    <div class="form-group">
+      <button type="submit" class="btn btn-sm btn-info" value="Save" ng-click="updateUser()">Save</button>
+      <button type="submit" class="btn btn-sm btn-info" ng-click="deleteUser(user)" value="delete">Delete</button>
+    </div>
+  </div>
+</form>

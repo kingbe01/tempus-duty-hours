@@ -1,0 +1,61 @@
+<h1>Users</h1>
+ <form>
+    <div class="form-group">
+      <div class="input-group">
+        <div class="input-group-addon"><i class="glyphicon glyphicon-search fa-search"></i></div>
+        <input type="text" class="form-control" placeholder="Search Users" ng-model="searchFish">
+      </div>      
+    </div>
+</form>
+
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <thead>
+              <tr>
+                <td>
+                    First Name
+                </td>
+                <td>
+                    Last Name
+                </td>
+                <td>
+                    Account Type
+                </td>
+                 <td>
+                    ID
+                </td>
+                 <td>
+                    Actions
+                </td>
+              </tr>
+            </thead>
+        </tr>
+    </thead>
+    <tbody class="table table-bordered table-striped">
+        <tr ng-repeat="user in users | filter:searchFish">
+            <td>
+                <div ng-hide="editingData[user.id]">{{user.first_name }}</div>
+                <div ng-show="editingData[user.id]"><input type="text" ng-model="user.first_name" /></div>
+            </td>
+            <td>
+                <div ng-hide="editingData[user.id]">{{user.last_name}}</div>
+                <div ng-show="editingData[user.id]"><input type="text" ng-model="user.last_name" /></div>
+            </td>
+            <td>
+                <div ng-hide="editingData[user.id]">{{user.account_type}}</div>
+                <div ng-show="editingData[user.id]"><input type="text" ng-model="user.account_type" /></div>
+            </td>
+            <td>
+                <div>{{user.id}}</div>
+            </td>
+            <td>
+                <button class="btn btn-sm btn-info" ui-sref="editUser({ id: user.id })">Edit</button>
+                <button class="btn btn-sm btn-info" ui-sref="viewUser({ id: user.id })">View</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+    
+
