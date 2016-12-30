@@ -5,15 +5,18 @@ application up and running.
 
 Things you may want to cover:
 
-* Ruby version
+* Ruby version 
+RoR 5
 
 * System dependencies
 
 * Configuration
 
 * Database creation
+Postgres
 
 * Database initialization
+rake db:migrate
 
 * How to run the test suite
 
