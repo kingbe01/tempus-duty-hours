@@ -5,7 +5,7 @@ class CreateShifts < ActiveRecord::Migration[5.0]
       t.datetime :end_time
       t.string :notes
       t.string :title
-      t.integer :account_id
+      t.integer :user_id
 
       t.timestamps
     end

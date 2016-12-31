@@ -1,0 +1,63 @@
+<h1>Shifts</h1>
+ <form>
+    <div class="form-group">
+      <div class="input-group">
+        <div class="input-group-addon"><i class="glyphicon glyphicon-search fa-search"></i></div>
+        <input type="text" class="form-control" placeholder="Search Shifts" ng-model="searchFish">
+      </div>      
+    </div>
+</form>
+
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <thead>
+              <tr>
+                <td>
+                    Title
+                </td>
+                <td>
+                    Start Time
+                </td>
+                <td>
+                    End Time
+                </td>
+                 <td>
+                    Notes
+                </td>
+                 <td>
+                    Account Id
+                </td>
+                <td>
+                    Actions
+                </td>
+              </tr>
+            </thead>
+        </tr>
+    </thead>
+    <tbody class="table table-bordered table-striped">
+        <tr ng-repeat="shift in shifts | filter:searchFish">
+            <td>
+                <div >{{shift.title}}</div>
+            </td>
+            <td>
+                <div>{{shift.start | date : format : short}}</div>
+            </td>
+            <td>
+                <div>{{shift.end | date : format : short}}</div>
+            </td>
+            <td>
+               <div>{{shift.notes}}</div>
+            </td>
+             <td>
+               <div>{{shift.user_id}}</div>
+            </td>
+            <td>
+                <button class="btn btn-sm btn-info" ui-sref="editShift({ id: shift.id })">Edit</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+    
+

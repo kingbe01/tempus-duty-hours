@@ -2,12 +2,12 @@
 
 <p>
   <strong>Start time:</strong>
-  <%= @shift.start_time %>
+  <%= @shift.start %>
 </p>
 
 <p>
   <strong>End time:</strong>
-  <%= @shift.end_time %>
+  <%= @shift.end %>
 </p>
 
 <p>
@@ -22,7 +22,7 @@
 
 <p>
   <strong>Account:</strong>
-  <%= @shift.account_id %>
+  <%= @shift.user_id %>
 </p>
 
 <%= link_to 'Edit', edit_shift_path(@shift) %> |

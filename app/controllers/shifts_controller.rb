@@ -10,6 +10,13 @@ class ShiftsController < ApplicationController
   # GET /shifts/1
   # GET /shifts/1.json
   def show
+    @shift = Shift.find(params[:id])
+    respond_to do |format|
+      format.html
+      format.json{
+        render :json => @shift.to_json
+      }
+    end
   end
 
   # GET /shifts/new
@@ -69,6 +76,6 @@ class ShiftsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def shift_params
-      params.require(:shift).permit(:start_time, :end_time, :notes, :title, :account_id)
+      params.require(:shift).permit(:start, :end, :notes, :title, :user_id)
     end
 end

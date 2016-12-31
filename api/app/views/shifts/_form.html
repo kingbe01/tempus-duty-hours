@@ -1,0 +1,40 @@
+<div ng-controller="DatepickerPopupCtrl">
+  <fieldset>
+    <div class="col-md-4">
+      <div class="form-group" show-errors>
+        <label class="control-label" for="title">Title</label>
+        <input name="name" type="text" ng-model="shift.title" id="title" class="form-control" placeholder="Title" required>
+      </div>
+      <div class="form-group" show-errors>
+        <label class="control-label" for="start">Start Time</label>
+        <p class="input-group">
+          <input type="text" class="form-control" uib-datepicker-popup="MM-dd-yyyy-hh-mm" ng-model="shift.start" is-open="popup1.opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" alt-input-formats="altInputFormats" placeholder={{shift.start}} />
+          <span class="input-group-btn">
+            <button type="button" class="btn btn-default" ng-click="open1()"><i class="glyphicon glyphicon-calendar"></i></button>
+          </span>
+      </p>
+      </div>
+      <div class="form-group" show-errors>
+        <label class="control-label" for="end">End Time</label>
+        <p class="input-group">
+          <input type="text" class="form-control" uib-datepicker-popup="MM-dd-yyyy-hh-mm" ng-model="shift.end" is-open="popup2.opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" alt-input-formats="altInputFormats" placeholder={{shift.end}} />
+          <span class="input-group-btn">
+            <button type="button" class="btn btn-default" ng-click="open2()"><i class="glyphicon glyphicon-calendar"></i></button>
+          </span>
+      </p>
+      </div>
+       <div class="form-group" show-errors>
+        <label class="control-label" for="notes">Notes</label>
+        <input name="name" type="text" ng-model="shift.notes" id="notes" class="form-control" placeholder="Notes" required>
+      </div>
+      <div class="form-group" show-errors>
+        <label class="control-label" for="user_id">User ID</label>
+        <input name="name" type="text" ng-model="shift.user_id" id="user_id" class="form-control" placeholder="User ID" required>
+      </div>
+    </div>
+
+    <div ng-show="error" class="text-danger">
+      <strong ng-bind="error"></strong>
+    </div>
+  </fieldset>
+</div>
